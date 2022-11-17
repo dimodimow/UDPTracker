@@ -8,7 +8,7 @@ UDPTracker project - contains 2 APIs:
 <br />
 -UDPTracker - WEB API for UDP server listener which one saves the client data to the database(IP and Message).
 <br />
--UDPReport - WEB API for returning saved messages from the database by filter.
+-UDPReport - WEB API for returning saved messages from the database by filter (UDPReport calls UDPTracker GET endpoint).
 <br />
 <br />
 Platforms: ASP.NET Core 6 for the APIs, .Net Core 6 for the console application.
