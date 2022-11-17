@@ -20,3 +20,6 @@ Db-Aprroach: Code-first
 Database: MSSQL Server
 <br />
 Tools: Swagger
+
+<br />
+It is configured to start the both API projects(UDPTracker, UDPReport) when it is ran.
