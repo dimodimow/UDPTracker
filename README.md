@@ -6,9 +6,9 @@ ClientUDP project - Console Application with which one we can send testing UDP c
 UDPTracker project - contains 2 APIs:
 <br />
 <br />
--UDPTracker - WEB API for UDP server listener which one saves our data to the database(IP and Message).
+-UDPTracker - WEB API for UDP server listener which one saves the client data to the database(IP and Message).
 <br />
--UDPReport - WEB API for returning saved messages from the database by UDPTracker endpoint -> GET method.
+-UDPReport - WEB API for returning saved messages from the database by filter.
 <br />
 <br />
 Platforms: ASP.NET Core 6 for the APIs, .Net Core 6 for the console application.
