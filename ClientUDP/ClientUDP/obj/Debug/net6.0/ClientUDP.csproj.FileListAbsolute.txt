@@ -1,0 +1,15 @@
+C:\Users\DimoDimov\Desktop\UDPTask\ClientUDP\ClientUDP\bin\Debug\net6.0\ClientUDP.exe
+C:\Users\DimoDimov\Desktop\UDPTask\ClientUDP\ClientUDP\bin\Debug\net6.0\ClientUDP.deps.json
+C:\Users\DimoDimov\Desktop\UDPTask\ClientUDP\ClientUDP\bin\Debug\net6.0\ClientUDP.runtimeconfig.json
+C:\Users\DimoDimov\Desktop\UDPTask\ClientUDP\ClientUDP\bin\Debug\net6.0\ClientUDP.dll
+C:\Users\DimoDimov\Desktop\UDPTask\ClientUDP\ClientUDP\bin\Debug\net6.0\ClientUDP.pdb
+C:\Users\DimoDimov\Desktop\UDPTask\ClientUDP\ClientUDP\obj\Debug\net6.0\ClientUDP.csproj.AssemblyReference.cache
+C:\Users\DimoDimov\Desktop\UDPTask\ClientUDP\ClientUDP\obj\Debug\net6.0\ClientUDP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DimoDimov\Desktop\UDPTask\ClientUDP\ClientUDP\obj\Debug\net6.0\ClientUDP.AssemblyInfoInputs.cache
+C:\Users\DimoDimov\Desktop\UDPTask\ClientUDP\ClientUDP\obj\Debug\net6.0\ClientUDP.AssemblyInfo.cs
+C:\Users\DimoDimov\Desktop\UDPTask\ClientUDP\ClientUDP\obj\Debug\net6.0\ClientUDP.csproj.CoreCompileInputs.cache
+C:\Users\DimoDimov\Desktop\UDPTask\ClientUDP\ClientUDP\obj\Debug\net6.0\ClientUDP.dll
+C:\Users\DimoDimov\Desktop\UDPTask\ClientUDP\ClientUDP\obj\Debug\net6.0\refint\ClientUDP.dll
+C:\Users\DimoDimov\Desktop\UDPTask\ClientUDP\ClientUDP\obj\Debug\net6.0\ClientUDP.pdb
+C:\Users\DimoDimov\Desktop\UDPTask\ClientUDP\ClientUDP\obj\Debug\net6.0\ClientUDP.genruntimeconfig.cache
+C:\Users\DimoDimov\Desktop\UDPTask\ClientUDP\ClientUDP\obj\Debug\net6.0\ref\ClientUDP.dll
