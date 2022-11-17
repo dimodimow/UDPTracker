@@ -10,15 +10,15 @@ namespace UDPTracker.Services
     public class UDPServerService : IUDPServerService
     {
         private readonly UDPTrackerDbContext context;
-        private readonly IIPService iPService;
+        private readonly IIPService ipService;
         private readonly IMessageService messageService;
 
         public UDPServerService(UDPTrackerDbContext context,
-            IIPService iPService,
+            IIPService ipService,
             IMessageService messageService)
         {
             this.context = context;
-            this.iPService = iPService;
+            this.ipService = ipService;
             this.messageService = messageService;
         }
 
@@ -43,11 +43,11 @@ namespace UDPTracker.Services
 
             var message = Encoding.UTF8.GetString(result.Buffer);
 
-            var isIpExisting = await this.context.IPs.FirstOrDefaultAsync(x => x.Ip == ip);
+            var ipEntity = await this.context.IPs.FirstOrDefaultAsync(x => x.Ip == ip);
 
-            if (isIpExisting == null)
+            if (ipEntity == null)
             {
-                await this.iPService.CreateAsync(ip);
+                await this.ipService.CreateAsync(ip);
             }
 
             await this.messageService.CreateAsync(new CreateMessageModel

@@ -17,9 +17,9 @@ namespace UDPTracker.Services
         }
         public async Task CreateAsync(CreateMessageModel model)
         {
-            var ipId = await this.context.IPs.FirstOrDefaultAsync(x => x.Ip == model.IP);
+            var ip = await this.context.IPs.FirstOrDefaultAsync(x => x.Ip == model.IP);
 
-            if (ipId == null || ipId.Id == Guid.Empty)
+            if (ip == null || ip.Id == Guid.Empty)
             {
                 return;
             }
@@ -27,7 +27,7 @@ namespace UDPTracker.Services
             this.context.Messages.Add(new MessageEntity
             {
                 Message = model.Message,
-                IPId = ipId.Id,
+                IPId = ip.Id,
                 CreatedAt = DateTime.Now
             });
 
