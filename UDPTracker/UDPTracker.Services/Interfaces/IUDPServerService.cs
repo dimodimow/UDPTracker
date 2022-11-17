@@ -2,6 +2,6 @@
 {
     public interface IUDPServerService
     {
-        void StartListener();
+        Task StartListener();
     }
 }

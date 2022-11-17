@@ -22,19 +22,17 @@ namespace UDPTracker.Services
             this.messageService = messageService;
         }
 
-        public void StartListener()
+        public async Task StartListener()
         {
-            Task.Run(async () =>
-              {
-                  var udpClient = new UdpClient(11000);
+            using (var udpClient = new UdpClient(11000))
+            {
+                while (true)
+                {
+                    var result = await udpClient.ReceiveAsync();
 
-                  while (true)
-                  {
-                      var result = await udpClient.ReceiveAsync();
-
-                      await this.SaveData(result);
-                  }
-              });
+                    await this.SaveData(result);
+                }
+            }
         }
 
         private async Task SaveData(UdpReceiveResult result)
