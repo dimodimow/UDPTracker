@@ -17,6 +17,6 @@ namespace UDPTracker.Controllers
         [HttpGet]
         [ApiExplorerSettings(IgnoreApi = true)]
         public async Task<IEnumerable<MessageModel>> Get([FromQuery] MessageFilter filter)
-        => await this.messageService.FindBy(filter);
+        => await this.messageService.FindByAsync(filter);
     }
 }

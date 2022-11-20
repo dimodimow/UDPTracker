@@ -22,7 +22,7 @@ namespace UDPTracker.Services
             this.messageService = messageService;
         }
 
-        public async Task StartListener()
+        public async Task StartListenerAsync()
         {
             using (var udpClient = new UdpClient(11000))
             {
@@ -30,12 +30,12 @@ namespace UDPTracker.Services
                 {
                     var result = await udpClient.ReceiveAsync();
 
-                    await this.SaveData(result);
+                    await this.SaveDataAsync(result);
                 }
             }
         }
 
-        private async Task SaveData(UdpReceiveResult result)
+        private async Task SaveDataAsync(UdpReceiveResult result)
         {
             var ip = result.RemoteEndPoint.Address.ToString();
 

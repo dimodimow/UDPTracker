@@ -34,7 +34,7 @@ namespace UDPTracker.Services
             await this.context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<MessageModel>> FindBy(MessageFilter filter)
+        public async Task<IEnumerable<MessageModel>> FindByAsync(MessageFilter filter)
         {
             var filtered = this.Filter(filter);
 

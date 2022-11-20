@@ -18,7 +18,7 @@ var scope = app.Services.CreateScope();
 
 var udpServerService = scope.ServiceProvider.GetRequiredService<IUDPServerService>();
 
-udpServerService.StartListener();
+udpServerService.StartListenerAsync();
 
 if (app.Environment.IsDevelopment())
 {

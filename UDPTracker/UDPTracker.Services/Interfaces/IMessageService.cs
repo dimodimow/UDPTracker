@@ -6,6 +6,6 @@ namespace UDPTracker.Services.Interfaces
     public interface IMessageService
     {
         Task CreateAsync(CreateMessageModel model);
-        Task<IEnumerable<MessageModel>> FindBy(MessageFilter filter);
+        Task<IEnumerable<MessageModel>> FindByAsync(MessageFilter filter);
     }
 }
