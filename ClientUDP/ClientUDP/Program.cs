@@ -21,5 +21,3 @@ while (true)
 
     message = Console.ReadLine();
 }
-
-Console.ReadLine();
