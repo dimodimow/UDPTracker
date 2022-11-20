@@ -41,6 +41,11 @@ namespace UDPTracker.Services
 
             var message = Encoding.UTF8.GetString(result.Buffer);
 
+            if (string.IsNullOrEmpty(message))
+            {
+                return;
+            }
+
             var ipEntity = await this.context.IPs.FirstOrDefaultAsync(x => x.Ip == ip);
 
             if (ipEntity == null)

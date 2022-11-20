@@ -49,9 +49,12 @@ namespace UDPTracker.Services
 
         private Expression<Func<MessageEntity, bool>> Filter(MessageFilter filter)
         {
+            DateTimeOffset? dateTo = string.IsNullOrEmpty(filter.DateTo) ? null : DateTimeOffset.Parse(filter.DateTo);
+            DateTimeOffset? dateFrom = string.IsNullOrEmpty(filter.DateFrom) ? null : DateTimeOffset.Parse(filter.DateFrom);
+
             return x => (string.IsNullOrEmpty(filter.IP) || x.IP.Ip.Contains(filter.IP)) &&
-                     (!filter.DateTo.HasValue || x.CreatedAt <= filter.DateTo) &&
-                    (!filter.DateFrom.HasValue || x.CreatedAt >= filter.DateFrom);
+                     (dateTo == null || x.CreatedAt <= dateTo) &&
+                    (dateFrom == null || x.CreatedAt >= dateFrom);
         }
     }
 }

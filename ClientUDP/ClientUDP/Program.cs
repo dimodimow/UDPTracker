@@ -10,7 +10,7 @@ var ipAddress = Dns.GetHostAddresses(Dns.GetHostName())[1];
 
 var message = Console.ReadLine();
 
-while (!string.IsNullOrEmpty(message))
+while (true)
 {
     byte[] buffer = Encoding.ASCII.GetBytes(message);
     var ep = new IPEndPoint(ipAddress, 11000);

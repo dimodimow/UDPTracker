@@ -21,7 +21,10 @@ namespace UDPReport.Services
             using (var client = new HttpClient())
             {
                 var requestUri = QueryHelpers.AddQueryString("https://localhost:7294/api/message/", query);
+
                 var response = await client.GetAsync(requestUri);
+
+                response.EnsureSuccessStatusCode();
 
                 var content = await response.Content.ReadAsStringAsync();
 
