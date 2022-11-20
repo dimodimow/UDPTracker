@@ -36,7 +36,7 @@ namespace UDPTracker.Services
 
         public async Task<IEnumerable<MessageModel>> FindByAsync(MessageFilter filter)
         {
-            var filtered = this.Filter(filter);
+            var filtered = Filter(filter);
 
             var messages = await this.context.Messages.Where(filtered).ToListAsync();
 
@@ -47,7 +47,7 @@ namespace UDPTracker.Services
             });
         }
 
-        private Expression<Func<MessageEntity, bool>> Filter(MessageFilter filter)
+        private static Expression<Func<MessageEntity, bool>> Filter(MessageFilter filter)
         {
             DateTimeOffset? dateTo = string.IsNullOrEmpty(filter.DateTo) ? null : DateTimeOffset.Parse(filter.DateTo);
             DateTimeOffset? dateFrom = string.IsNullOrEmpty(filter.DateFrom) ? null : DateTimeOffset.Parse(filter.DateFrom);
