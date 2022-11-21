@@ -17,7 +17,10 @@ var app = builder.Build();
 var udpServerService = app.Services.CreateScope()
                                    .ServiceProvider.GetRequiredService<IUDPServerService>();
 
-await udpServerService.StartListenerAsync();
+Task.Run(async () =>
+{
+    await udpServerService.StartListenerAsync();
+});
 
 if (app.Environment.IsDevelopment())
 {
