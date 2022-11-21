@@ -14,11 +14,10 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-var scope = app.Services.CreateScope();
+var udpServerService = app.Services.CreateScope()
+                                   .ServiceProvider.GetRequiredService<IUDPServerService>();
 
-var udpServerService = scope.ServiceProvider.GetRequiredService<IUDPServerService>();
-
-udpServerService.StartListenerAsync();
+await udpServerService.StartListenerAsync();
 
 if (app.Environment.IsDevelopment())
 {
